@@ -10,7 +10,7 @@ export default function HeroHome() {
           {/* Section header */}
           <div className="pb-12 text-center md:pb-20">
             <h1
-              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl leading-tight"
+              className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-3xl font-semibold text-transparent md:text-5xl leading-tight"
               data-aos="fade-up"
               style={{ lineHeight: '1.2' }}
             >
@@ -18,7 +18,7 @@ export default function HeroHome() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-xl text-indigo-200/65"
+                className="mb-8 text-lg md:text-xl text-indigo-200/65"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >

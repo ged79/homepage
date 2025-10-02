@@ -7,7 +7,7 @@ export default function Logo() {
     <Link href="/" className="inline-flex items-center gap-2 shrink-0" aria-label="CONNEXUS">
       <Image src={logo} alt="CONNEXUS Logo" width={32} height={32} />
       <span className="text-xl font-bold bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-        CONNEXUS
+        코넥서스
       </span>
     </Link>
   );
