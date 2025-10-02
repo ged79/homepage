@@ -1,5 +1,6 @@
 import Logo from "./logo";
 import Image from "next/image";
+import Link from "next/link";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
 
 export default function Footer() {
@@ -19,206 +20,171 @@ export default function Footer() {
             alt="Footer illustration"
           />
         </div>
-        <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
+        <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-3 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(3,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
           {/* 1st block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
+            <h3 className="text-sm font-medium text-gray-200">서비스</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  Features
-                </a>
+                  홈페이지 제작
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  Integrations
-                </a>
+                  쇼핑몰/이커머스
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  Pricing &amp; Plans
-                </a>
+                  모바일 앱 개발
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  Changelog
-                </a>
+                  플랫폼 구축
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  Our method
-                </a>
+                  AI 솔루션
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  User policy
-                </a>
+                  유지보수/마이그레이션
+                </Link>
               </li>
             </ul>
           </div>
           {/* 2nd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Company</h3>
+            <h3 className="text-sm font-medium text-gray-200">회사</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/about"
                 >
-                  About us
-                </a>
+                  회사 소개
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/portfolio"
                 >
-                  Diversity &amp; Inclusion
-                </a>
+                  포트폴리오
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/testimonials"
                 >
-                  Blog
-                </a>
+                  개발 프로세스
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/tech-stack"
                 >
-                  Careers
-                </a>
+                  기술 스택
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote"
                 >
-                  Financial statements
-                </a>
+                  견적 문의
+                </Link>
               </li>
             </ul>
           </div>
           {/* 3rd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Resources</h3>
+            <h3 className="text-sm font-medium text-gray-200">고객지원</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/quote?type=consultation"
                 >
-                  Community
-                </a>
+                  무료 상담
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/faq"
                 >
-                  Terms of service
-                </a>
+                  자주 묻는 질문
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="/terms"
                 >
-                  Report a vulnerability
-                </a>
+                  이용약관
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  href="/privacy"
+                >
+                  개인정보처리방침
+                </Link>
               </li>
             </ul>
           </div>
-          {/* 4th block */}
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">
-              Content Library
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Templates
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Tutorials
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Knowledge base
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Learn
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Cookie manager
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* 5th block */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:text-right">
+          {/* 4th block - Company Info */}
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 lg:text-right">
             <div className="mb-3">
               <Logo />
             </div>
             <div className="text-sm">
               <p className="mb-3 text-indigo-200/65">
-                © Cruip.com
+                © 2025 CONNEXUS
                 <span className="text-gray-700"> · </span>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
-                  Terms
+                  이용약관
                 </a>
+              </p>
+              <p className="mb-3 text-indigo-200/65">
+                충북 영동군 영동읍 눈어치4로 4, 201<br/>
+                대표: 김영아 | 사업자등록번호: 853-81-03832<br/>
+                이메일: contact@connexus.co.kr | 전화: 010-7741-4569
               </p>
               <ul className="inline-flex gap-1">
                 <li>
                   <a
                     className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
+                    href="#"
                     aria-label="Twitter"
                   >
                     <svg
@@ -233,7 +199,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
+                    href="#"
                     aria-label="Medium"
                   >
                     <svg
@@ -248,7 +214,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                    href="#0"
+                    href="#"
                     aria-label="Github"
                   >
                     <svg

@@ -46,7 +46,7 @@ export default function ModalVideo({
 
       {/* Video thumbnail */}
       <button
-        className="group relative flex items-center justify-center rounded-2xl focus:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200"
+        className="group relative flex items-center justify-center w-full rounded-2xl focus:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-200"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -54,15 +54,34 @@ export default function ModalVideo({
         data-aos="fade-up"
         data-aos-delay={200}
       >
-        <figure className="relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900">
+        <figure className="relative w-full overflow-hidden rounded-2xl before:absolute before:inset-0 before:-z-10 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500/20 before:to-gray-900" style={{ aspectRatio: '1104 / 576' }}>
+          {/* Blur edge overlay */}
+          <div className="absolute inset-0 z-10 pointer-events-none">
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-950 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-gray-950 to-transparent" />
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-950 to-transparent" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-950 to-transparent" />
+          </div>
           <Image
-            className="opacity-50 grayscale"
+            className="grayscale brightness-120"
             src={thumb}
-            width={thumbWidth}
-            height={thumbHeight}
+            width={2248}
+            height={2448}
             priority
             alt={thumbAlt}
+            style={{ 
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center center',
+              filter: 'blur(0px)'
+            }}
           />
+          {/* Inner blur mask */}
+          <div className="absolute inset-0 z-5" style={{
+            boxShadow: 'inset 0 0 100px 50px rgba(15, 23, 42, 0.9)'
+          }} />
         </figure>
         {/* Play icon */}
         <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
