@@ -18,8 +18,9 @@ export default function DefaultLayout({
       disable: "phone",
       duration: 600,
       easing: "ease-out-sine",
+      mirror: false,
     });
-  });
+  }, []);
 
   return (
     <>

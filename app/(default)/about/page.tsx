@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import PageIllustration from "@/components/page-illustration";
+import AboutMobile from "./about-mobile";
 import { useState } from "react";
 
 export default function About() {
@@ -100,7 +101,12 @@ export default function About() {
   return (
     <>
       <PageIllustration />
-      <section className="relative">
+      
+      {/* Mobile version */}
+      <AboutMobile />
+      
+      {/* Desktop version */}
+      <section className="relative hidden md:block">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="py-12 pt-32 md:py-20 md:pt-40">
             
@@ -109,9 +115,12 @@ export default function About() {
               <h1 className="mb-6 text-4xl font-bold text-gray-100 md:text-5xl">
                 우리는 <span className="text-gray-300">데모</span>를 만들지 않습니다
               </h1>
-              <p className="text-xl text-gray-400 mb-8">
-                지금 이 순간에도 실제로 작동하고, 돈이 오가고, 사람들이 사용하는<br />
-                <span className="text-gray-200 font-semibold">진짜 서비스</span>를 만듭니다.
+              <p className="text-lg md:text-xl text-gray-400 mb-8">
+                <span className="md:hidden">실제 서비스를 만듭니다</span>
+                <span className="hidden md:inline">
+                  지금 이 순간에도 실제로 작동하고, 돈이 오가고, 사람들이 사용하는<br />
+                  <span className="text-gray-200 font-semibold">진짜 서비스</span>를 만듭니다.
+                </span>
               </p>
             </div>
 
@@ -125,11 +134,11 @@ export default function About() {
                 </span>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="text-center">
+                <div className="text-center hidden md:block">
                   <p className="text-3xl font-bold text-gray-100">5+</p>
                   <p className="text-sm text-gray-400">완성된 프로젝트</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center hidden md:block">
                   <p className="text-3xl font-bold text-gray-100">100%</p>
                   <p className="text-sm text-gray-400">프로젝트 완수율</p>
                 </div>
@@ -218,8 +227,8 @@ export default function About() {
                 <div className="bg-gray-800/30 rounded-2xl p-8 backdrop-blur">
                   <h4 className="text-lg font-semibold text-gray-200 mb-6">핵심 기능</h4>
                   <div className="space-y-4">
-                    {currentProject.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                    {currentProject.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className={`flex items-start gap-3 ${idx >= 2 ? 'hidden md:flex' : ''}`}>
                         <div className={`w-8 h-8 rounded-lg bg-gray-700 flex items-center justify-center flex-shrink-0`}>
                           <span className="text-white text-sm font-bold">{idx + 1}</span>
                         </div>

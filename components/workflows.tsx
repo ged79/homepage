@@ -1,4 +1,5 @@
 import Image from "next/image";
+import WorkflowsMobile from "@/components/workflows-mobile";
 import WorkflowImg01 from "@/public/images/consulting.jpg"; // 상담 & 기획 & 디자인
 import WorkflowImg02 from "@/public/images/developing.jpg"; // 개발 & 테스트
 import WorkflowImg03 from "@/public/images/maint.jpg"; // 배포 & 유지보수
@@ -6,7 +7,12 @@ import Spotlight from "@/components/spotlight";
 
 export default function Workflows() {
   return (
-    <section>
+    <>
+      {/* Mobile version */}
+      <WorkflowsMobile />
+      
+      {/* Desktop version */}
+      <section className="hidden md:block">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           {/* Section header */}
@@ -16,12 +22,15 @@ export default function Workflows() {
                 개발 프로세스
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-2xl font-semibold text-transparent md:text-4xl">
               체계적인 프로젝트 진행 과정
             </h2>
-            <p className="text-lg text-indigo-200/65">
-              요구사항 분석부터 배포까지 애자일 방법론과 DevOps 문화로
-              빠르고 안정적인 개발을 보장합니다. 매 단계마다 고객과 긴밀히 소통합니다.
+            <p className="text-base md:text-lg text-indigo-200/65">
+              <span className="md:hidden">애자일과 DevOps로 빠른 개발</span>
+              <span className="hidden md:inline">
+                요구사항 분석부터 배포까지 애자일 방법론과 DevOps 문화로
+                빠르고 안정적인 개발을 보장합니다. 매 단계마다 고객과 긴밀히 소통합니다.
+              </span>
             </p>
           </div>
           {/* Spotlight items */}
@@ -171,5 +180,6 @@ export default function Workflows() {
         </div>
       </div>
     </section>
+      </>
   );
 }

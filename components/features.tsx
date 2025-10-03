@@ -3,10 +3,150 @@ import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import ServiceImage from "@/public/images/service.png";
 
-
 export default function Features() {
+  const services = [
+    {
+      title: "기업 홈페이지",
+      desc: "회사 소개와 브랜드 아이덴티티 구축",
+      price: "600-3,000만원",
+      icon: "🏢",
+      gradient: "from-blue-500 to-indigo-500",
+      features: ["맞춤 디자인", "SEO 최적화", "관리자 페이지"]
+    },
+    {
+      title: "이커머스 플랫폼",
+      desc: "온라인 비즈니스를 위한 완벽한 솔루션",
+      price: "1,500-3,500만원",
+      icon: "🛒",
+      gradient: "from-indigo-500 to-purple-500",
+      features: ["결제 시스템", "재고 관리", "회원 시스템"]
+    },
+    {
+      title: "헬스케어 플랫폼",
+      desc: "의료 서비스 디지털 혁신",
+      price: "5,000만원~",
+      icon: "⚕️",
+      gradient: "from-purple-500 to-pink-500",
+      features: ["원격의료", "EMR 연동", "보안 인증"]
+    },
+    {
+      title: "통합 플랫폼",
+      desc: "B2B2C 비즈니스 통합 관리",
+      price: "3,000-5,000만원",
+      icon: "🔗",
+      gradient: "from-pink-500 to-red-500",
+      features: ["다중 사용자", "정산 시스템", "API 연동"]
+    },
+    {
+      title: "소규모 프로젝트",
+      desc: "빠르고 효율적인 웹사이트",
+      price: "200-800만원",
+      icon: "✨",
+      gradient: "from-green-500 to-teal-500",
+      features: ["랜딩페이지", "포트폴리오", "이벤트"]
+    },
+    {
+      title: "기술 지원",
+      desc: "지속적인 유지보수와 개선",
+      price: "문의하기",
+      icon: "🔧",
+      gradient: "from-gray-500 to-gray-600",
+      features: ["24/7 지원", "버그 수정", "기능 추가"]
+    }
+  ];
+
   return (
-    <section className="relative">
+    <>
+      {/* Mobile version */}
+      <section className="md:hidden relative px-4 py-16 overflow-hidden">
+        {/* Background blobs */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-600/5 rounded-full filter blur-3xl -translate-x-1/2 translate-y-1/2" />
+        
+        {/* Section header */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full border border-indigo-500/20 mb-4">
+            <span className="text-xs font-medium text-indigo-400">핵심 서비스</span>
+          </div>
+          <h2 className="text-3xl font-bold mb-3">
+            <span className="bg-gradient-to-r from-gray-100 to-indigo-200 bg-clip-text text-transparent">
+              맞춤 솔루션
+            </span>
+          </h2>
+          <p className="text-gray-400">
+            프로젝트 규모별 최적화된 개발
+          </p>
+        </div>
+
+        {/* Service Cards Grid */}
+        <div className="space-y-4 mb-10">
+          {services.map((service, idx) => (
+            <div key={idx} className="group relative">
+              <div className="relative bg-gray-800/30 backdrop-blur rounded-2xl p-5 border border-gray-700/50 hover:border-indigo-500/50 transition-all overflow-hidden">
+                {/* Gradient background on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity`} />
+                
+                {/* Content */}
+                <div className="relative">
+                  {/* Header with icon */}
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">{service.icon}</span>
+                      <div>
+                        <h3 className="font-bold text-white text-lg">{service.title}</h3>
+                        <p className="text-gray-400 text-sm mt-1">{service.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Features pills */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {service.features.map((feature, fidx) => (
+                      <span key={fidx} className="px-2 py-1 text-xs bg-gray-700/30 text-gray-300 rounded-lg">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Price and action */}
+                  <div className="flex items-center justify-between">
+                    <span className={`font-bold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                      {service.price}
+                    </span>
+                    <a href="/quote" className="text-indigo-400 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+                      상담하기 →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="relative bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-6 overflow-hidden">
+          <div className="absolute inset-0 bg-black/20" />
+          <div className="relative">
+            <h3 className="text-white font-bold text-xl mb-2">
+              프로젝트 시작할 준비되셨나요?
+            </h3>
+            <p className="text-white/80 text-sm mb-4">
+              전문가와 무료 상담으로 최적의 방향을 찾아드립니다
+            </p>
+            <a
+              href="/quote"
+              className="inline-block px-6 py-3 bg-white text-indigo-600 rounded-xl font-medium hover:scale-105 transition-transform"
+            >
+              무료 견적 받기
+            </a>
+          </div>
+          {/* Decorative element */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full filter blur-2xl translate-x-1/2 -translate-y-1/2" />
+        </div>
+      </section>
+
+      {/* Desktop version */}
+      <section className="hidden md:block relative">
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"
@@ -211,5 +351,6 @@ export default function Features() {
         </div>
       </div>
     </section>
+    </>
   );
 }
