@@ -160,13 +160,13 @@ export default function TestimonialsPage() {
     <>
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="py-12 pt-32 md:py-20 md:pt-40">
+        <div className="py-12 pt-16 md:py-20 md:pt-32">
           {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-12 text-center">
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+          <div className="mx-auto max-w-3xl pb-8 md:pb-12 text-center">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text text-transparent text-3xl md:text-4xl font-semibold pb-2">
               개발 프로세스
             </h2>
-            <p className="text-lg text-indigo-200/65">
+            <p className="text-base md:text-lg text-gray-400">
               체계적인 5단계 프로세스로 프로젝트를 성공으로 이끕니다
             </p>
           </div>

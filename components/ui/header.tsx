@@ -57,7 +57,7 @@ export default function Header() {
             <li>
               <Link
                 className="text-sm font-medium text-indigo-200/65 transition hover:text-indigo-500"
-                href="/testimonials"
+                href="/process"
               >
                 개발 프로세스
               </Link>
@@ -82,7 +82,7 @@ export default function Header() {
               <li><Link className="block py-2 text-gray-300 hover:text-white" href="/about" onClick={() => setMobileMenuOpen(false)}>회사 소개</Link></li>
               <li><Link className="block py-2 text-gray-300 hover:text-white" href="/tech-stack" onClick={() => setMobileMenuOpen(false)}>기술 스택</Link></li>
               <li><Link className="block py-2 text-gray-300 hover:text-white" href="/portfolio" onClick={() => setMobileMenuOpen(false)}>포트폴리오</Link></li>
-              <li><Link className="block py-2 text-gray-300 hover:text-white" href="/testimonials" onClick={() => setMobileMenuOpen(false)}>개발 프로세스</Link></li>
+              <li><Link className="block py-2 text-gray-300 hover:text-white" href="/process" onClick={() => setMobileMenuOpen(false)}>개발 프로세스</Link></li>
               <li><Link className="block py-2 text-gray-300 hover:text-white" href="/quote" onClick={() => setMobileMenuOpen(false)}>견적 문의</Link></li>
             </ul>
           </div>

@@ -1,13 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 import PageIllustration from "@/components/page-illustration";
 import Image from "next/image";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
 
 export default function QuotePage() {
-  const [isConsultation, setIsConsultation] = useState(false);
+  const searchParams = typeof window !== 'undefined' 
+    ? new URLSearchParams(window.location.search)
+    : null;
+  const initialType = searchParams?.get('type') === 'consultation';
+  
+  const [isConsultation, setIsConsultation] = useState(initialType);
   const [selectedCase, setSelectedCase] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -19,12 +23,7 @@ export default function QuotePage() {
     message: ""
   });
 
-  // useEffect로 클라이언트 사이드에서만 searchParams 확인
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const type = params.get('type');
-    setIsConsultation(type === 'consultation');
-  }, []);
+  // useEffect 제거 - 초기값으로 설정
 
   // 페이지 타이틀 설정
   const pageTitle = isConsultation 
@@ -197,13 +196,13 @@ export default function QuotePage() {
           </div>
         </div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="py-12 md:py-20">
+          <div className="py-12 pt-16 md:py-20 md:pt-32">
             {/* Header */}
-            <div className="mx-auto max-w-3xl pb-12 text-center">
-              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#c7d2fe,#fafafa,#cbd5e1,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <div className="mx-auto max-w-3xl pb-8 md:pb-12 text-center">
+              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#c7d2fe,#fafafa,#cbd5e1,#e5e7eb)] bg-[length:200%_auto] bg-clip-text text-transparent text-3xl md:text-4xl font-semibold pb-2">
                 {pageTitle}
               </h1>
-              <p className="text-lg text-indigo-200/65">
+              <p className="text-base md:text-lg text-gray-400">
                 {pageSubtitle}
               </p>
             </div>
@@ -211,13 +210,13 @@ export default function QuotePage() {
             {/* 무료 상담일 경우 간단한 폼만 표시 */}
             {isConsultation ? (
               <div className="max-w-2xl mx-auto">
-                <div className="bg-gray-800/50 rounded-2xl p-8">
-                  <h3 className="text-xl font-bold text-gray-100 mb-6">
+                <div className="bg-gray-800/50 rounded-2xl p-6 md:p-8">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-100 mb-5 md:mb-6">
                     어떤 프로젝트를 준비 중이신가요?
                   </h3>
                   
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+                    <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                       <div>
                         <input
                           type="text"
@@ -225,7 +224,7 @@ export default function QuotePage() {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({...formData, name: e.target.value})}
-                          className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-300 focus:border-indigo-500 focus:outline-none"
+                          className="w-full px-3 md:px-4 py-2.5 md:py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-300 focus:border-indigo-500 focus:outline-none text-sm md:text-base"
                         />
                       </div>
                       
@@ -333,12 +332,12 @@ export default function QuotePage() {
               // 기존 견적 페이지 내용
               <>
                 {/* 프로젝트 선택 탭 */}
-                <div className="flex justify-center gap-2 mb-8 flex-wrap">
+                <div className="flex justify-center gap-1.5 md:gap-2 mb-6 md:mb-8 flex-wrap">
                   {realProjects.map((project) => (
                     <button
                       key={project.id}
                       onClick={() => setSelectedCase(project.id)}
-                      className={`px-4 py-2 rounded-full transition-all text-sm md:text-base ${
+                      className={`px-3 md:px-4 py-1.5 md:py-2 rounded-full transition-all text-xs md:text-sm lg:text-base ${
                         selectedCase === project.id
                           ? "bg-indigo-500 text-white shadow-lg"
                           : "bg-gray-800/60 text-gray-300 hover:bg-gray-700/80"

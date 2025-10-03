@@ -68,7 +68,7 @@ export default function WorkflowsMobile() {
               
               {/* Card */}
               <div className="ml-16 group">
-                <div className="relative bg-gray-800/50 backdrop-blur rounded-2xl overflow-hidden border border-gray-700/50 hover:border-indigo-500/50 transition-all">
+                <div className="card-glass hover:border-indigo-500/50 transition-all overflow-hidden">
                   {/* Duration badge */}
                   <div className="absolute top-4 right-4 z-10">
                     <div className="px-3 py-1 bg-black/50 backdrop-blur rounded-full">
@@ -108,23 +108,6 @@ export default function WorkflowsMobile() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Bottom CTA */}
-      <div className="mt-12 relative">
-        <div className="bg-gradient-to-r from-indigo-600/10 to-purple-600/10 rounded-2xl p-6 border border-indigo-500/20">
-          <h3 className="text-white font-bold mb-2">프로젝트를 시작하세요</h3>
-          <p className="text-gray-400 text-sm mb-4">
-            전문가와 무료 상담을 통해 최적의 솔루션을 찾아드립니다
-          </p>
-          <a
-            href="/quote"
-            className="inline-flex items-center gap-2 text-indigo-400 font-medium text-sm group"
-          >
-            무료 상담 신청
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </a>
         </div>
       </div>
     </section>

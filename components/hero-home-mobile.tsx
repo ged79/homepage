@@ -9,23 +9,12 @@ export default function HeroHomeMobile() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full filter blur-3xl translate-x-1/3 translate-y-1/3" />
       
       {/* Content */}
-      <div className="relative px-4 py-16">
-        {/* Logo/Brand */}
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-full border border-indigo-500/20">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
-            <span className="text-xs font-medium text-indigo-400">AI 기반 개발 전문</span>
-          </div>
-        </div>
-
+      <div className="relative px-4 py-12">
         {/* Main heading with gradient */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4 leading-tight">
-            <span className="bg-gradient-to-br from-gray-100 via-indigo-200 to-purple-200 bg-clip-text text-transparent">
-              디지털 혁신을<br />
-              연결하는<br />
-              기술 파트너
-            </span>
+        <div className="mb-6">
+          <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text text-transparent text-3xl font-bold mb-4 leading-tight">
+            디지털 혁신을 연결하는<br />
+            기술 파트너
           </h1>
           <p className="text-gray-400 text-lg">
             웹 · 앱 · AI 솔루션 전문
@@ -33,7 +22,7 @@ export default function HeroHomeMobile() {
         </div>
 
         {/* Visual element with overlay stats */}
-        <div className="relative mb-10">
+        <div className="relative mb-8">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <div className="aspect-[4/3]">
               <Image
@@ -47,17 +36,17 @@ export default function HeroHomeMobile() {
             </div>
             
             {/* Floating stats cards */}
-            <div className="absolute bottom-4 left-4 right-4 grid grid-cols-3 gap-2">
-              <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-                <div className="text-white font-bold text-lg">10+</div>
+            <div className="absolute bottom-3 left-3 right-3 grid grid-cols-3 gap-2">
+              <div className="glass rounded-lg p-2">
+                <div className="text-white font-bold text-base">10+</div>
                 <div className="text-white/70 text-xs">년 경력</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-                <div className="text-white font-bold text-lg">200+</div>
+              <div className="glass rounded-lg p-2">
+                <div className="text-white font-bold text-base">200+</div>
                 <div className="text-white/70 text-xs">프로젝트</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-                <div className="text-white font-bold text-lg">98%</div>
+              <div className="glass rounded-lg p-2">
+                <div className="text-white font-bold text-base">98%</div>
                 <div className="text-white/70 text-xs">만족도</div>
               </div>
             </div>
@@ -65,7 +54,7 @@ export default function HeroHomeMobile() {
         </div>
 
         {/* Feature pills */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-6">
           <span className="px-3 py-1 bg-gray-800 rounded-full text-xs text-gray-300 border border-gray-700">
             ✓ 빠른 개발
           </span>

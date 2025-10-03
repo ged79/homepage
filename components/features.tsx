@@ -58,13 +58,13 @@ export default function Features() {
   return (
     <>
       {/* Mobile version */}
-      <section className="md:hidden relative px-4 py-16 overflow-hidden">
+      <section className="md:hidden relative px-4 py-12 overflow-hidden">
         {/* Background blobs */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-600/5 rounded-full filter blur-3xl -translate-x-1/2 translate-y-1/2" />
         
         {/* Section header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full border border-indigo-500/20 mb-4">
             <span className="text-xs font-medium text-indigo-400">핵심 서비스</span>
           </div>
@@ -95,18 +95,18 @@ export default function Features() {
                       <div>
                         <h3 className="font-bold text-white text-lg">{service.title}</h3>
                         <p className="text-gray-400 text-sm mt-1">{service.desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Features pills */}
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {service.features.map((feature, fidx) => (
-                      <span key={fidx} className="px-2 py-1 text-xs bg-gray-700/30 text-gray-300 rounded-lg">
+                        </div>
+                        </div>
+                        </div>
+                        
+                        {/* Features pills */}
+                        <div className="flex flex-wrap gap-2 mb-3">
+                        {service.features.map((feature, fidx) => (
+                        <span key={fidx} className="px-2 py-1 text-xs glass-dark text-gray-300 rounded-lg">
                         {feature}
-                      </span>
-                    ))}
-                  </div>
+                        </span>
+                        ))}
+                        </div>
                   
                   {/* Price and action */}
                   <div className="flex items-center justify-between">
@@ -121,27 +121,6 @@ export default function Features() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="relative bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl p-6 overflow-hidden">
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="relative">
-            <h3 className="text-white font-bold text-xl mb-2">
-              프로젝트 시작할 준비되셨나요?
-            </h3>
-            <p className="text-white/80 text-sm mb-4">
-              전문가와 무료 상담으로 최적의 방향을 찾아드립니다
-            </p>
-            <a
-              href="/quote"
-              className="inline-block px-6 py-3 bg-white text-indigo-600 rounded-xl font-medium hover:scale-105 transition-transform"
-            >
-              무료 견적 받기
-            </a>
-          </div>
-          {/* Decorative element */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full filter blur-2xl translate-x-1/2 -translate-y-1/2" />
         </div>
       </section>
 

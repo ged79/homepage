@@ -108,14 +108,14 @@ export default function About() {
       {/* Desktop version */}
       <section className="relative hidden md:block">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="py-12 pt-32 md:py-20 md:pt-40">
+          <div className="py-12 pt-32 md:py-20 md:pt-32">
             
             {/* 메인 헤더 - 진솔한 메시지 */}
             <div className="mx-auto max-w-4xl pb-16 text-center">
-              <h1 className="mb-6 text-4xl font-bold text-gray-100 md:text-5xl">
-                우리는 <span className="text-gray-300">데모</span>를 만들지 않습니다
+              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text text-transparent text-3xl md:text-4xl font-semibold pb-2">
+                우리는 데모를 만들지 않습니다
               </h1>
-              <p className="text-lg md:text-xl text-gray-400 mb-8">
+              <p className="text-base md:text-lg text-gray-400">
                 <span className="md:hidden">실제 서비스를 만듭니다</span>
                 <span className="hidden md:inline">
                   지금 이 순간에도 실제로 작동하고, 돈이 오가고, 사람들이 사용하는<br />
@@ -330,7 +330,7 @@ export default function About() {
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl text-white font-bold">KY</span>
+                  <span className="text-2xl text-white font-bold">경영</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-200">김영아</h3>
                   <p className="text-sm text-gray-400 mb-2">대표이사</p>
@@ -339,7 +339,7 @@ export default function About() {
 
                 <div className="text-center">
                   <div className="w-24 h-24 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl text-white font-bold">LK</span>
+                    <span className="text-2xl text-white font-bold">기술</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-200">이경환</h3>
                   <p className="text-sm text-gray-400 mb-2">기술이사 (CTO)</p>
@@ -348,7 +348,7 @@ export default function About() {
 
                 <div className="text-center">
                   <div className="w-24 h-24 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-3xl text-white font-bold">LJ</span>
+                    <span className="text-2xl text-white font-bold">사업</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-200">임진석</h3>
                   <p className="text-sm text-gray-400 mb-2">사업이사 (CSO)</p>
