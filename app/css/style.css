@@ -1,0 +1,153 @@
+@import 'tailwindcss';
+
+/* Additional styles */
+@import './additional-styles/utility-patterns.css' layer(components);
+@import './additional-styles/theme.css';
+
+@plugin "@tailwindcss/forms" {
+  strategy: base;
+}
+
+@theme {
+  --font-inter: var(--font-inter), sans-serif;
+  --font-nacelle: var(--font-nacelle), sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5384;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5715;
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.5333;
+  --text-base--letter-spacing: -0.0125em;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-lg--letter-spacing: -0.0125em;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-xl--letter-spacing: -0.0125em;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.415;
+  --text-2xl--letter-spacing: -0.0268em;
+  --text-3xl: 1.75rem;
+  --text-3xl--line-height: 1.3571;
+  --text-3xl--letter-spacing: -0.0268em;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.1;
+  --text-4xl--letter-spacing: -0.0268em;
+  --text-5xl: 3.5rem;
+  --text-5xl--line-height: 1;
+  --text-5xl--letter-spacing: -0.0268em;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1;
+  --text-6xl--letter-spacing: -0.0268em;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+  --text-7xl--letter-spacing: -0.0268em;
+
+  --animate-shine: shine 5s ease-in-out 500ms infinite;
+  --animate-gradient: gradient 6s linear infinite;
+
+  @keyframes shine {
+    0% {
+      top: 0;
+      transform: scaleY(5);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    20% {
+      top: 100%;
+      transform: scaleY(10);
+      opacity: 0;
+    }
+    100% {
+      top: 100%;
+      transform: scaleY(1);
+      opacity: 0;
+    }
+  }
+  @keyframes gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+/* Gradient text animation */
+.animate-gradient {
+  animation: gradient 6s linear infinite;
+  background-size: 200% auto;
+}
+
+/* Spotlight card hover effects for light mode */
+.spotlight-card-light {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, rgb(238 242 255), white, rgb(243 232 255));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
+  transition: all 0.3s;
+}
+
+.spotlight-card-light:hover {
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2), 0 10px 10px -5px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+.spotlight-card-light::before,
+.spotlight-card-light::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms;
+  filter: blur(48px);
+}
+
+.spotlight-card-light::before {
+  width: 320px;
+  height: 320px;
+  left: -160px;
+  top: -160px;
+  background: linear-gradient(to right, rgb(99, 102, 241), rgb(147, 51, 234));
+  transform: translate(var(--mouse-x, 0), var(--mouse-y, 0));
+  z-index: 10;
+}
+
+.spotlight-card-light::after {
+  width: 256px;
+  height: 256px;
+  left: -192px;
+  top: -192px;
+  background: linear-gradient(to right, rgb(129, 140, 248), rgb(168, 85, 247));
+  transform: translate(var(--mouse-x, 0), var(--mouse-y, 0));
+  z-index: 30;
+}
+
+.spotlight-card-light:hover::before {
+  opacity: 0.4;
+}
+
+.spotlight-card-light:hover::after {
+  opacity: 0.3;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
