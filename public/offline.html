@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오프라인 - 코넥서스</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #f9fafb, #ffffff);
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #4f46e5;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+    button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #4338ca;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔌 오프라인 상태</h1>
+    <p>인터넷 연결을 확인해주세요</p>
+    <button onclick="location.reload()">다시 시도</button>
+  </div>
+</body>
+</html>

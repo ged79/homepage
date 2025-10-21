@@ -1,0 +1,114 @@
+/* Global Design System Utilities */
+
+/* Text Gradients */
+.text-gradient-primary {
+  @apply bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent;
+}
+
+.text-gradient-light {
+  @apply bg-gradient-to-r from-gray-100 to-primary-200 bg-clip-text text-transparent;
+}
+
+/* Background Gradients */
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-primary-600 to-secondary-600;
+}
+
+.bg-gradient-dark {
+  @apply bg-gradient-to-b from-gray-900 via-gray-950 to-black;
+}
+
+/* Glass Effect */
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-gray-800/30 backdrop-blur-md border border-gray-700/50;
+}
+
+/* Card Styles */
+.card {
+  @apply rounded-2xl p-6 transition-all duration-300;
+}
+
+.card-hover {
+  @apply hover:scale-105 hover:shadow-xl;
+}
+
+/* Button Base */
+.btn-base {
+  @apply inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200;
+}
+
+.btn-primary {
+  @apply btn-base bg-gradient-primary text-white hover:shadow-glow;
+}
+
+.btn-secondary {
+  @apply btn-base bg-gray-800 text-gray-300 border border-gray-700 hover:bg-gray-700;
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply px-4 py-12 md:px-6 md:py-20;
+}
+
+.container-max {
+  @apply max-w-6xl mx-auto;
+}
+
+/* Heading Styles */
+.heading-1 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+}
+
+.heading-2 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+
+.heading-3 {
+  @apply text-2xl md:text-3xl font-semibold;
+}
+
+/* Animation Classes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.4); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive Grid */
+.grid-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* Focus States */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+/* Blob Decorations */
+.blob {
+  @apply absolute rounded-full filter blur-3xl opacity-20;
+}
+
+.blob-primary {
+  @apply blob bg-primary-600;
+}
+
+.blob-secondary {
+  @apply blob bg-secondary-600;
+}

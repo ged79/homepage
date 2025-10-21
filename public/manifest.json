@@ -1,0 +1,47 @@
+{
+  "name": "코넥서스 - Connexus",
+  "short_name": "코넥서스",
+  "description": "웹·앱 개발 전문 기술 파트너",
+  "theme_color": "#4f46e5",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/?utm_source=pwa",
+  "id": "connexus-pwa",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "포트폴리오",
+      "short_name": "포트폴리오",
+      "url": "/portfolio",
+      "icons": [{ "src": "/images/logo.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "견적 문의",
+      "short_name": "문의",
+      "url": "/quote",
+      "icons": [{ "src": "/images/logo.svg", "sizes": "96x96" }]
+    }
+  ]
+}
