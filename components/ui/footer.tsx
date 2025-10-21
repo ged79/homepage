@@ -166,11 +166,7 @@ export default function Footer() {
             </div>
             <div className="text-sm">
               <p className="mb-3 text-indigo-200/65">
-<<<<<<< HEAD
                 © 2025 CONEXUS
-=======
-                © 2025 CONNEXUS
->>>>>>> e930f213f982c84ff53205ba7b7747618e288223
                 <span className="text-gray-700"> · </span>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
@@ -182,11 +178,7 @@ export default function Footer() {
               <p className="mb-3 text-indigo-200/65">
                 충북 영동군 영동읍 눈어치4로 4, 201<br/>
                 대표: 김영아 | 사업자등록번호: 853-81-03832<br/>
-<<<<<<< HEAD
                 이메일: conexus25@conexus.co.kr | 전화: 010-7741-4569
-=======
-                이메일: contact@connexus.co.kr | 전화: 010-7741-4569
->>>>>>> e930f213f982c84ff53205ba7b7747618e288223
               </p>
               <ul className="inline-flex gap-1">
                 <li>
