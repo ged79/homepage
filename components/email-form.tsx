@@ -16,7 +16,7 @@ export default function QuotePage() {
     message: ""
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // EmailJS 직접 호출 (가입 후 키 입력)

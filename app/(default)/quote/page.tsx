@@ -162,6 +162,7 @@ export default function QuotePage() {
 
   const currentProject = realProjects[selectedCase];
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -202,6 +203,14 @@ export default function QuotePage() {
       console.error('EmailJS error:', error);
       alert('전송 실패. 직접 연락주세요: 010-7741-4569');
     }
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = isConsultation 
+      ? "무료 상담 신청이 접수되었습니다. 24시간 내에 연락드리겠습니다."
+      : "견적 요청이 접수되었습니다. 24시간 내에 상세 견적서를 보내드리겠습니다.";
+    alert(message);
+>>>>>>> e930f213f982c84ff53205ba7b7747618e288223
   };
 
   return (
@@ -335,8 +344,13 @@ export default function QuotePage() {
                   <div className={`mt-6 p-4 ${isDarkMode ? 'bg-indigo-900/20 border-indigo-500/30' : 'bg-indigo-50 border-indigo-300'} rounded-lg border`}>
                     <p className={`text-sm ${isDarkMode ? 'text-indigo-300' : 'text-indigo-700'} text-center`}>
                       빠른 상담을 원하시면 직접 연락주세요<br />
+<<<<<<< HEAD
                       <span className="font-semibold">📞 010-7741-4569</span> | 
                       <span className="font-semibold"> 📧 conexus25@conexus.co.kr</span>
+=======
+                      <span className="font-semibold">📞 010-1234-5678</span> | 
+                      <span className="font-semibold"> 📧 contact@connexus.kr</span>
+>>>>>>> e930f213f982c84ff53205ba7b7747618e288223
                     </p>
                   </div>
                 </div>
@@ -671,4 +685,8 @@ export default function QuotePage() {
       </section>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e930f213f982c84ff53205ba7b7747618e288223
