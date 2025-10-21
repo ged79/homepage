@@ -335,13 +335,8 @@ export default function QuotePage() {
                   <div className={`mt-6 p-4 ${isDarkMode ? 'bg-indigo-900/20 border-indigo-500/30' : 'bg-indigo-50 border-indigo-300'} rounded-lg border`}>
                     <p className={`text-sm ${isDarkMode ? 'text-indigo-300' : 'text-indigo-700'} text-center`}>
                       빠른 상담을 원하시면 직접 연락주세요<br />
-<<<<<<< HEAD
                       <span className="font-semibold">📞 010-7741-4569</span> | 
                       <span className="font-semibold"> 📧 conexus25@conexus.co.kr</span>
-=======
-                      <span className="font-semibold">📞 010-1234-5678</span> | 
-                      <span className="font-semibold"> 📧 contact@connexus.kr</span>
->>>>>>> e930f213f982c84ff53205ba7b7747618e288223
                     </p>
                   </div>
                 </div>
@@ -676,8 +671,4 @@ export default function QuotePage() {
       </section>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e930f213f982c84ff53205ba7b7747618e288223
