@@ -63,6 +63,48 @@ export default function HeroHome() {
                 </div>
               </div>
             </div>
+
+            {/* Trust / stats band */}
+            <div
+              className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl sm:grid-cols-4"
+              data-aos="fade-up"
+              data-aos-delay={500}
+              style={{
+                backgroundColor: isDarkMode
+                  ? 'rgba(99, 102, 241, 0.12)'
+                  : 'rgba(79, 70, 229, 0.10)',
+              }}
+            >
+              {[
+                { value: '120+', label: '프로젝트 완료' },
+                { value: '10년+', label: '개발 경력' },
+                { value: '98%', label: '고객 만족도' },
+                { value: '50+', label: '협력 기업' },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="px-4 py-6 text-center backdrop-blur-sm"
+                  style={{
+                    backgroundColor: isDarkMode
+                      ? 'rgba(17, 24, 39, 0.6)'
+                      : 'rgba(255, 255, 255, 0.7)',
+                  }}
+                >
+                  <div
+                    className="font-nacelle text-2xl font-semibold md:text-3xl"
+                    style={{ color: isDarkMode ? 'rgb(165, 180, 252)' : 'rgb(79, 70, 229)' }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div
+                    className="mt-1 text-sm"
+                    style={{ color: isDarkMode ? 'rgba(199, 210, 254, 0.65)' : 'rgb(75, 85, 99)' }}
+                  >
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <ModalVideo
