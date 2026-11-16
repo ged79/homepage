@@ -142,7 +142,7 @@ export default function AiHome() {
         <div className="relative z-10 max-w-4xl">
           <h1
             style={D}
-            className="text-[clamp(40px,6.4vw,86px)] font-bold leading-[1.04] tracking-[-0.02em]"
+            className="break-keep text-[clamp(40px,6.4vw,86px)] font-bold leading-[1.04] tracking-[-0.02em]"
           >
             아이디어를
             <br />
@@ -151,7 +151,7 @@ export default function AiHome() {
             </span>{" "}
             만듭니다.
           </h1>
-          <p className="mt-6 max-w-[40ch] text-[clamp(15px,1.5vw,18px)] font-light leading-[1.7] text-[#c2cad2]">
+          <p className="mt-6 max-w-[40ch] break-keep text-[clamp(15px,1.5vw,18px)] font-light leading-[1.7] text-[#d7dde3] [text-shadow:0_1px_14px_rgba(0,0,0,.85)]">
             외주처럼 떠넘기지 않습니다. 출시한 뒤의 운영까지, 끝까지.
           </p>
           <div className="mt-9 flex flex-wrap gap-3.5">
@@ -175,17 +175,17 @@ export default function AiHome() {
       <section className="border-t border-white/[0.07] bg-[#0a0a0c] px-[6vw] py-14">
         <div className="mx-auto max-w-6xl">
           <div className="grid items-center gap-10 lg:grid-cols-[auto_1px_1fr]">
-            <div className="flex flex-wrap gap-x-12 gap-y-6">
+            <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:gap-x-12 sm:gap-y-6">
               {[
                 { n: "8건", l: "구축 · 운영 프로젝트" },
                 { n: "713건", l: "게시물 무손실 이관" },
                 { n: "0건", l: "웹 접근성 자동점검 위반" },
               ].map((x) => (
                 <div key={x.l}>
-                  <div style={D} className="text-[34px] font-bold leading-none">
+                  <div style={D} className="text-[24px] font-bold leading-none sm:text-[34px]">
                     <span className="bg-gradient-to-r from-[#3fd0ff] to-[#7aa2ff] bg-clip-text text-transparent">{x.n}</span>
                   </div>
-                  <div className="mt-2 text-[13px] text-[#8b95a3]">{x.l}</div>
+                  <div className="mt-2 break-keep text-[11.5px] leading-snug text-[#8b95a3] sm:text-[13px]">{x.l}</div>
                 </div>
               ))}
             </div>
@@ -206,7 +206,7 @@ export default function AiHome() {
                   </span>
                 ))}
               </div>
-              <p className="mt-3 text-[12.5px] text-[#6b7480]">
+              <p className="mt-3 break-keep text-[12.5px] text-[#6b7480]">
                 공공 조달에 필요한 자격을 갖추고, 기관 · 기업 시스템을 직접 만들고 운영합니다.
               </p>
             </div>
