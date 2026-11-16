@@ -26,7 +26,32 @@ const FOUNDERS = [
   },
 ];
 
-const WORKS = [
+const WORKS: {
+  type: string; title: string; url?: string; img?: string; tag: string;
+}[] = [
+  {
+    type: "공공 · 기관 홈페이지",
+    title: "영동군체육회 공식 홈페이지",
+    img: "/works/ydsports.jpg",
+    tag: "2026.12 오픈 예정",
+  },
+  {
+    type: "협회 홈페이지 전면 리뉴얼",
+    title: "대한그라운드골프협회",
+    img: "/works/kgga.jpg",
+    tag: "구축 중",
+  },
+  {
+    type: "기업 홈페이지 · 온라인 주문",
+    title: "영동와인공장",
+    img: "/works/ydwine.jpg",
+    tag: "충북 · 영동",
+  },
+  {
+    type: "시스템 종합 구축 · 네트워크 · 보안",
+    title: "영동국민건강체육센터",
+    tag: "키오스크 · 결제단말 연동",
+  },
   {
     type: "단체 · 기관 홈페이지",
     title: "민족통일청년회 영동군",
@@ -54,13 +79,6 @@ const WORKS = [
     url: "https://timely-pixie-6670b8.netlify.app/",
     img: "/works/cheongsan.jpg",
     tag: "충북 · 옥천",
-  },
-  {
-    type: "기업 홈페이지",
-    title: "거성 국제결혼",
-    url: "https://gswd.netlify.app/",
-    img: "/works/gswd.jpg",
-    tag: "브랜드",
   },
 ];
 
@@ -191,12 +209,14 @@ export default function AiHome() {
           </div>
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2">
-            {WORKS.map((w, i) => (
-              <a
-                key={w.url}
-                href={w.url}
-                target="_blank"
-                rel="noopener noreferrer"
+            {WORKS.map((w, i) => {
+              const Card = w.url ? "a" : "div";
+              return (
+              <Card
+                key={w.title}
+                {...(w.url
+                  ? { href: w.url, target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className={`rv group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c10] transition hover:-translate-y-1 hover:border-[#3fd0ff]/40 ${
                   i === 0 ? "sm:col-span-2" : ""
                 }`}
@@ -204,12 +224,20 @@ export default function AiHome() {
                 <div
                   className={`relative overflow-hidden ${i === 0 ? "aspect-[21/9]" : "aspect-[16/10]"}`}
                 >
-                  <img
-                    src={w.img}
-                    alt={`${w.title} 미리보기`}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top opacity-90 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-100"
-                  />
+                  {w.img ? (
+                    <img
+                      src={w.img}
+                      alt={`${w.title} 미리보기`}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-top opacity-90 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-100"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#0e2233] via-[#0c0c10] to-[#1a1030]">
+                      <span className="text-[46px] font-bold tracking-tight text-[#3fd0ff]/25">
+                        {w.title.slice(0, 2)}
+                      </span>
+                    </div>
+                  )}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0c0c10] via-transparent to-transparent" />
                   <span className="absolute left-4 top-4 rounded-md bg-[#3fd0ff] px-2 py-1 text-[11px] font-bold text-[#021018]">
                     {w.tag}
@@ -224,12 +252,15 @@ export default function AiHome() {
                       {w.title}
                     </h3>
                   </div>
-                  <span className="shrink-0 text-[#6b7480] transition group-hover:text-[#3fd0ff]">
-                    ↗
-                  </span>
+                  {w.url && (
+                    <span className="shrink-0 text-[#6b7480] transition group-hover:text-[#3fd0ff]">
+                      ↗
+                    </span>
+                  )}
                 </div>
-              </a>
-            ))}
+              </Card>
+              );
+            })}
           </div>
         </div>
       </section>
