@@ -38,8 +38,9 @@ const WORKS: {
   {
     type: "협회 홈페이지 전면 리뉴얼",
     title: "대한그라운드골프협회",
+    url: "https://kgga7330.or.kr/",
     img: "/works/kgga.jpg",
-    tag: "구축 중",
+    tag: "2026.11 오픈",
   },
   {
     type: "기업 홈페이지 · 온라인 주문",
@@ -50,7 +51,8 @@ const WORKS: {
   {
     type: "시스템 종합 구축 · 네트워크 · 보안",
     title: "영동국민건강체육센터",
-    tag: "키오스크 · 결제단말 연동",
+    img: "/works/ydcenter.jpg",
+    tag: "키오스크 · 결제단말 · 라커 연동",
   },
   {
     type: "단체 · 기관 홈페이지",
