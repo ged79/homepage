@@ -45,6 +45,7 @@ const WORKS: {
   {
     type: "기업 홈페이지 · 온라인 주문",
     title: "영동와인공장",
+    url: "https://ydwine.co.kr/",
     img: "/works/ydwine.jpg",
     tag: "충북 · 영동",
   },
