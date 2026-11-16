@@ -171,6 +171,49 @@ export default function AiHome() {
         </div>
       </section>
 
+      {/* ===== TRUST (숫자·자격) ===== */}
+      <section className="border-t border-white/[0.07] bg-[#0a0a0c] px-[6vw] py-14">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid items-center gap-10 lg:grid-cols-[auto_1px_1fr]">
+            <div className="flex flex-wrap gap-x-12 gap-y-6">
+              {[
+                { n: "8건", l: "구축 · 운영 프로젝트" },
+                { n: "713건", l: "게시물 무손실 이관" },
+                { n: "0건", l: "웹 접근성 자동점검 위반" },
+              ].map((x) => (
+                <div key={x.l}>
+                  <div style={D} className="text-[34px] font-bold leading-none">
+                    <span className="bg-gradient-to-r from-[#3fd0ff] to-[#7aa2ff] bg-clip-text text-transparent">{x.n}</span>
+                  </div>
+                  <div className="mt-2 text-[13px] text-[#8b95a3]">{x.l}</div>
+                </div>
+              ))}
+            </div>
+            <div className="hidden h-14 w-px bg-white/10 lg:block" />
+            <div>
+              <div className="flex flex-wrap gap-2.5">
+                {[
+                  "직접생산확인증명 · 정보시스템 개발",
+                  "직접생산확인증명 · 위탁운영 서비스",
+                  "소프트웨어사업자 신고",
+                  "중소기업확인서 · 공공기관 입찰용",
+                ].map((b) => (
+                  <span
+                    key={b}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[#3fd0ff]/30 bg-[#3fd0ff]/[0.06] px-4 py-2 text-[13px] text-[#cfe9f5]"
+                  >
+                    <span className="text-[#3fd0ff]">✓</span> {b}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-3 text-[12.5px] text-[#6b7480]">
+                공공 조달에 필요한 자격을 갖추고, 기관 · 기업 시스템을 직접 만들고 운영합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== FOUNDERS ===== */}
       <section id="founders" className="border-t border-white/[0.07] px-[6vw] py-24 lg:py-32">
         <div className="mx-auto max-w-6xl">
